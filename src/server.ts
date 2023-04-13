@@ -22,7 +22,6 @@ class Server {
   }
 
   public start() {
-    // Inicia o servidor
     this.app.listen(this.port, () => {
       console.log(`Servidor rodando em ${this.url}:${this.port}/v${this.version}`);
     });
