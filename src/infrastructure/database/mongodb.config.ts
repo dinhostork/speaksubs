@@ -1,5 +1,6 @@
 import { MongoClient, MongoClientOptions } from "mongodb";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
 
 dotenv.config();
 
@@ -23,4 +24,9 @@ export const connect = () => {
     .catch((error) => {
       console.log("Mongodb: Erro ao conectar: ", error);
     });
+};
+
+export const getDb = async () => {
+  const client = await MongoClient.connect(uri, clientOptions);
+  return client.db(process.env.MONGODB_DB_NAME);
 };
