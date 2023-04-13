@@ -16,6 +16,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "express-fileupload": "^1.4.0"
   }
 }
